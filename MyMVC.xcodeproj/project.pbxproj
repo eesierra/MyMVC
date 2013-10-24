@@ -14,13 +14,16 @@
 		916E0656181865BB002241DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 916E0655181865BB002241DC /* main.m */; };
 		916E065A181865BB002241DC /* ESAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 916E0659181865BB002241DC /* ESAppDelegate.m */; };
 		916E065D181865BB002241DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 916E065B181865BB002241DC /* Main.storyboard */; };
-		916E0660181865BB002241DC /* ESViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 916E065F181865BB002241DC /* ESViewController.m */; };
 		916E0662181865BB002241DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916E0661181865BB002241DC /* Images.xcassets */; };
 		916E0669181865BB002241DC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916E0668181865BB002241DC /* XCTest.framework */; };
 		916E066A181865BB002241DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916E0649181865BB002241DC /* Foundation.framework */; };
 		916E066B181865BB002241DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916E064D181865BB002241DC /* UIKit.framework */; };
 		916E0673181865BB002241DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 916E0671181865BB002241DC /* InfoPlist.strings */; };
 		916E0675181865BB002241DC /* MyMVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 916E0674181865BB002241DC /* MyMVCTests.m */; };
+		916E068018186658002241DC /* ESPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 916E067F18186658002241DC /* ESPost.m */; };
+		916E068318186789002241DC /* ESPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 916E068218186789002241DC /* ESPostTableViewCell.m */; };
+		916E068618186B3F002241DC /* ESPostsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 916E068518186B3F002241DC /* ESPostsTableViewController.m */; };
+		916E23DE1818A6A700F8D417 /* ESPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 916E23DD1818A6A700F8D417 /* ESPostViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +48,20 @@
 		916E0658181865BB002241DC /* ESAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESAppDelegate.h; sourceTree = "<group>"; };
 		916E0659181865BB002241DC /* ESAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESAppDelegate.m; sourceTree = "<group>"; };
 		916E065C181865BB002241DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		916E065E181865BB002241DC /* ESViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESViewController.h; sourceTree = "<group>"; };
-		916E065F181865BB002241DC /* ESViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESViewController.m; sourceTree = "<group>"; };
 		916E0661181865BB002241DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		916E0667181865BB002241DC /* MyMVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMVCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		916E0668181865BB002241DC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		916E0670181865BB002241DC /* MyMVCTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyMVCTests-Info.plist"; sourceTree = "<group>"; };
 		916E0672181865BB002241DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		916E0674181865BB002241DC /* MyMVCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyMVCTests.m; sourceTree = "<group>"; };
+		916E067E18186658002241DC /* ESPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPost.h; sourceTree = "<group>"; };
+		916E067F18186658002241DC /* ESPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPost.m; sourceTree = "<group>"; };
+		916E068118186789002241DC /* ESPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPostTableViewCell.h; sourceTree = "<group>"; };
+		916E068218186789002241DC /* ESPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPostTableViewCell.m; sourceTree = "<group>"; };
+		916E068418186B3F002241DC /* ESPostsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPostsTableViewController.h; sourceTree = "<group>"; };
+		916E068518186B3F002241DC /* ESPostsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPostsTableViewController.m; sourceTree = "<group>"; };
+		916E23DC1818A6A700F8D417 /* ESPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPostViewController.h; sourceTree = "<group>"; };
+		916E23DD1818A6A700F8D417 /* ESPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPostViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +124,14 @@
 				916E0658181865BB002241DC /* ESAppDelegate.h */,
 				916E0659181865BB002241DC /* ESAppDelegate.m */,
 				916E065B181865BB002241DC /* Main.storyboard */,
-				916E065E181865BB002241DC /* ESViewController.h */,
-				916E065F181865BB002241DC /* ESViewController.m */,
+				916E23DC1818A6A700F8D417 /* ESPostViewController.h */,
+				916E23DD1818A6A700F8D417 /* ESPostViewController.m */,
+				916E067E18186658002241DC /* ESPost.h */,
+				916E067F18186658002241DC /* ESPost.m */,
+				916E068118186789002241DC /* ESPostTableViewCell.h */,
+				916E068218186789002241DC /* ESPostTableViewCell.m */,
+				916E068418186B3F002241DC /* ESPostsTableViewController.h */,
+				916E068518186B3F002241DC /* ESPostsTableViewController.m */,
 				916E0661181865BB002241DC /* Images.xcassets */,
 				916E0650181865BB002241DC /* Supporting Files */,
 			);
@@ -250,7 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				916E0660181865BB002241DC /* ESViewController.m in Sources */,
+				916E23DE1818A6A700F8D417 /* ESPostViewController.m in Sources */,
+				916E068618186B3F002241DC /* ESPostsTableViewController.m in Sources */,
+				916E068018186658002241DC /* ESPost.m in Sources */,
+				916E068318186789002241DC /* ESPostTableViewCell.m in Sources */,
 				916E065A181865BB002241DC /* ESAppDelegate.m in Sources */,
 				916E0656181865BB002241DC /* main.m in Sources */,
 			);
@@ -461,6 +479,7 @@
 				916E067A181865BB002241DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		916E067B181865BB002241DC /* Build configuration list for PBXNativeTarget "MyMVCTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +488,7 @@
 				916E067D181865BB002241DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
