@@ -139,7 +139,7 @@
     cell.content.text = [_posts[indexPath.row] content];
     
     NSDateFormatter *date = [NSDateFormatter new];
-    [date setDateFormat:@"MM/dd HH:MM"];
+    [date setDateFormat:@"MM/dd HH:mm"];
     NSString *postDate = [date stringFromDate:[_posts[indexPath.row] timeStamp]];
     cell.timeStamp.text = postDate;
     
