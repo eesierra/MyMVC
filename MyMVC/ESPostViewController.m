@@ -8,6 +8,7 @@
 
 #import "ESPostViewController.h"
 #import "ESPostsTableViewController.h"
+#import "ESPost.h"
 
 @interface ESPostViewController ()
 
@@ -39,13 +40,22 @@
 
 - (IBAction)post:(id)sender
 {
-    ESPostsTableViewController *Post = [self.storyboard instantiateViewControllerWithIdentifier:@"ESPostsTableViewController"];
+    NSString *theUsername = self.myUsername.text;
+    NSString *theTitle = self.myTitle.text;
+    NSString *theContent = self.myContent.text;
     
-    Post.stringmyUsername = self.myUsername.text;
-    Post.stringmyTitle = self.myTitle.text;
-    Post.stringmyContent = self.myContent.text;
+    ESPost *theNewpost = [[ESPost alloc] init];
+    theNewpost.userName = theUsername;
+    theNewpost.title = theTitle;
+    theNewpost.content = theContent;
+    theNewpost.timeStamp = [NSDate date];
     
-    [self presentViewController:Post animated:YES completion:nil];
+    ESPostViewController *theNewpostController = [[ESPostViewController alloc] init];
+    theNewpostController.delegate = self;
+
+    [self.delegate addNewPost:theNewpost];
+    
+    
 }
 
 

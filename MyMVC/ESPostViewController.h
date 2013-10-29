@@ -7,6 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ESPost.h"
+
+@protocol AddPost <NSObject>
+
+- (void)addNewPost:(ESPost *)theNewpost;
+
+@end
+
 
 @interface ESPostViewController : UIViewController <UITextFieldDelegate>
 
@@ -15,6 +23,8 @@
 @property (nonatomic, weak) IBOutlet UITextField *myContent;
 
 @property (nonatomic, weak) IBOutlet UIButton *myPost;
+
+@property (nonatomic, weak) id delegate;
 
 - (IBAction)post:(id)sender;
 

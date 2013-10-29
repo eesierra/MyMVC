@@ -24,6 +24,7 @@
 		916E068318186789002241DC /* ESPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 916E068218186789002241DC /* ESPostTableViewCell.m */; };
 		916E068618186B3F002241DC /* ESPostsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 916E068518186B3F002241DC /* ESPostsTableViewController.m */; };
 		916E23DE1818A6A700F8D417 /* ESPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 916E23DD1818A6A700F8D417 /* ESPostViewController.m */; };
+		9184B18C181F519300374109 /* UIColor+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 9184B18B181F519300374109 /* UIColor+Custom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		916E068518186B3F002241DC /* ESPostsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPostsTableViewController.m; sourceTree = "<group>"; };
 		916E23DC1818A6A700F8D417 /* ESPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPostViewController.h; sourceTree = "<group>"; };
 		916E23DD1818A6A700F8D417 /* ESPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPostViewController.m; sourceTree = "<group>"; };
+		9184B18A181F519300374109 /* UIColor+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Custom.h"; sourceTree = "<group>"; };
+		9184B18B181F519300374109 /* UIColor+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Custom.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				916E068218186789002241DC /* ESPostTableViewCell.m */,
 				916E068418186B3F002241DC /* ESPostsTableViewController.h */,
 				916E068518186B3F002241DC /* ESPostsTableViewController.m */,
+				9184B18A181F519300374109 /* UIColor+Custom.h */,
+				9184B18B181F519300374109 /* UIColor+Custom.m */,
 				916E0661181865BB002241DC /* Images.xcassets */,
 				916E0650181865BB002241DC /* Supporting Files */,
 			);
@@ -271,6 +276,7 @@
 				916E068318186789002241DC /* ESPostTableViewCell.m in Sources */,
 				916E065A181865BB002241DC /* ESAppDelegate.m in Sources */,
 				916E0656181865BB002241DC /* main.m in Sources */,
+				9184B18C181F519300374109 /* UIColor+Custom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

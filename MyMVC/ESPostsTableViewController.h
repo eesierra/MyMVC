@@ -7,14 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ESPostViewController.h"
 
-@interface ESPostsTableViewController : UITableViewController
+@interface ESPostsTableViewController : UITableViewController <AddPost>
 
 @property (nonatomic) NSMutableArray *posts;
 
-@property (nonatomic) NSString *stringmyUsername;
-@property (nonatomic) NSString *stringmyTitle;
-@property (nonatomic) NSString *stringmyContent;
 
 
 @end

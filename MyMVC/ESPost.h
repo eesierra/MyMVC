@@ -16,5 +16,7 @@
 
 @property (nonatomic) NSDate *timeStamp;
 
+@property (nonatomic) UIColor *colors;
+
 
 @end

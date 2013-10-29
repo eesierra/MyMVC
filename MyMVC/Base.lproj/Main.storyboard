@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="zFM-7q-4BP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4t-zy-3o4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
-        <!--Posts Table View Controller-->
+        <!--Posts Table View Controller - Posts-->
         <scene sceneID="0yM-Xb-0vj">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oRA-rF-nJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="ESPostsTableViewController" id="uAN-Sr-3Jh" customClass="ESPostsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" id="1ez-DE-Np5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -14,7 +15,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="150" id="znM-SN-tD3" customClass="ESPostTableViewCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="150"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="znM-SN-tD3" id="Fsu-A3-sVd">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
@@ -60,12 +61,12 @@
                             <outlet property="delegate" destination="uAN-Sr-3Jh" id="BQA-EN-VZ7"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Posts" id="7Hc-vt-FMM"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oRA-rF-nJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="37" y="17"/>
         </scene>
-        <!--Post View Controller-->
+        <!--Post View Controller - Welcome!-->
         <scene sceneID="5Vy-T1-kpB">
             <objects>
                 <viewController storyboardIdentifier="ESPostViewController" id="zFM-7q-4BP" customClass="ESPostViewController" sceneMemberID="viewController">
@@ -78,54 +79,65 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PPO-i1-MIS">
-                                <rect key="frame" x="20" y="98" width="280" height="30"/>
+                                <rect key="frame" x="20" y="137" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hkZ-RA-DBh" id="lqS-V9-41f"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IIF-Th-ZaF">
-                                <rect key="frame" x="20" y="165" width="280" height="30"/>
+                                <rect key="frame" x="20" y="204" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hkZ-RA-DBh" id="8za-in-MDc"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mnx-iL-Y8u">
-                                <rect key="frame" x="20" y="232" width="280" height="30"/>
+                                <rect key="frame" x="20" y="271" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hkZ-RA-DBh" id="lUq-CU-XHs"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjl-iP-X72">
-                                <rect key="frame" x="74" y="69" width="172" height="21"/>
+                                <rect key="frame" x="74" y="108" width="172" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are Your Thoughts?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UuX-k7-vc9">
-                                <rect key="frame" x="55" y="203" width="210" height="21"/>
+                                <rect key="frame" x="55" y="242" width="210" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zan-RJ-1HY">
-                                <rect key="frame" x="74" y="136" width="172" height="21"/>
+                                <rect key="frame" x="74" y="175" width="172" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAp-oy-ACa">
-                                <rect key="frame" x="130" y="300" width="60" height="30"/>
+                                <rect key="frame" x="130" y="340" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Post!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="post:" destination="zFM-7q-4BP" eventType="touchUpInside" id="xCK-aj-Mmj"/>
+                                    <action selector="post:" destination="zFM-7q-4BP" eventType="touchUpInside" id="IP6-VK-pW8"/>
+                                    <segue destination="uAN-Sr-3Jh" kind="push" identifier="post" id="JjG-k3-7sB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Welcome!" id="DCe-UK-l00"/>
                     <connections>
                         <outlet property="myContent" destination="mnx-iL-Y8u" id="v7J-fN-GeA"/>
                         <outlet property="myPost" destination="JAp-oy-ACa" id="KsV-HU-0oq"/>
@@ -135,7 +147,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0g-l2-oWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="469" y="17"/>
+            <point key="canvasLocation" x="995" y="17"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oiX-LX-c6a">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M4t-zy-3o4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9tG-dT-xMf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zFM-7q-4BP" kind="relationship" relationship="rootViewController" id="RdI-M2-pie"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZg-q4-j1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-357" y="7"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

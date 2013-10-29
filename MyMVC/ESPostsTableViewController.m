@@ -10,6 +10,7 @@
 #import "ESPost.h"
 #import "ESPostTableViewCell.h"
 #import "ESPostViewController.h"
+#import "UIColor+Custom.h"
 
 @interface ESPostsTableViewController ()
 
@@ -30,74 +31,78 @@
 {
     [super viewDidLoad];
     
-    
-    ESPost *post = [[ESPost alloc] init];
-    post.userName = self.stringmyUsername;
-    post.title = self.stringmyTitle;
-    post.content = self.stringmyContent;
-    post.timeStamp = [NSDate date];
    
     ESPost *post1 = [[ESPost alloc] init];
     post1.userName = @"rwilson";
     post1.title = @"I am a QB!";
     post1.content = @"We had a great game this Thursday! Go Seahawks!";
     post1.timeStamp = [NSDate date];
+    post1.colors = [UIColor randomColor];
     
     ESPost *post2 = [[ESPost alloc] init];
     post2.userName = @"rtannehill";
     post2.title = @"Dolphins' QB!";
     post2.content = @"We're looking to bounce back against the Pats! Go Fins!";
     post2.timeStamp = [NSDate date];
+    post2.colors = [UIColor randomColor];
     
     ESPost *post3 = [[ESPost alloc] init];
     post3.userName = @"emanning";
     post3.title = @"Go Giants!";
     post3.content = @"I'll try to go undefeated for the rest of the season!";
     post3.timeStamp = [NSDate date];
+    post3.colors = [UIColor randomColor];
     
     ESPost *post4 = [[ESPost alloc] init];
     post4.userName = @"pmanning";
     post4.title = @"Eli's older brother";
     post4.content = @"We're doing something special in Denver! Watch out!";
     post4.timeStamp = [NSDate date];
+    post4.colors = [UIColor randomColor];
     
     ESPost *post5 = [[ESPost alloc] init];
     post5.userName = @"arodgers";
     post5.title = @"From Green Bay!";
     post5.content = @"Looking to break some NFL records!";
     post5.timeStamp = [NSDate date];
+    post5.colors = [UIColor randomColor];
     
     ESPost *post6 = [[ESPost alloc] init];
     post6.userName = @"gsmith";
     post6.title = @"All about the Jets";
     post6.content = @"Look out AFC East! There's a new QB in town";
     post6.timeStamp = [NSDate date];
+    post6.colors = [UIColor randomColor];
     
     ESPost *post7 = [[ESPost alloc] init];
     post7.userName = @"lbjames";
     post7.title = @"Go Heat!";
     post7.content = @"Looking for a 3-peat. Let's see how this goes.";
     post7.timeStamp = [NSDate date];
+    post7.colors = [UIColor randomColor];
     
     ESPost *post8 = [[ESPost alloc] init];
     post8.userName = @"kbryant";
     post8.title = @"Hello L.A.";
     post8.content = @"I'm coming back for another championship";
     post8.timeStamp = [NSDate date];
+    post8.colors = [UIColor randomColor];
     
     ESPost *post9 = [[ESPost alloc] init];
     post9.userName = @"dhoward";
     post9.title = @"Moving to Houston";
     post9.content = @"Don't underestimate the Rockets, we want it all!";
     post9.timeStamp = [NSDate date];
+    post9.colors = [UIColor randomColor];
     
     ESPost *post10 = [[ESPost alloc] init];
     post10.userName = @"lmessi";
     post10.title = @"Barça and Argentina";
     post10.content = @"Ready for this Saturday's Clasico vs. Real Madrid";
     post10.timeStamp = [NSDate date];
+    post10.colors = [UIColor randomColor];
     
-    _posts = [NSMutableArray arrayWithObjects: post, post1, post2, post3, post4, post5, post6, post7, post8, post9, post10, nil];
+    _posts = [NSMutableArray arrayWithObjects: post1, post2, post3, post4, post5, post6, post7, post8, post9, post10, nil];
     
     
     
@@ -138,13 +143,14 @@
     
     cell.content.text = [_posts[indexPath.row] content];
     
+    cell.backgroundColor = [_posts[indexPath.row] colors];
+    
     NSDateFormatter *date = [NSDateFormatter new];
     [date setDateFormat:@"MM/dd HH:mm"];
     NSString *postDate = [date stringFromDate:[_posts[indexPath.row] timeStamp]];
     cell.timeStamp.text = postDate;
     
     
-    cell.detailTextLabel.text = [_posts[indexPath.row] title];
     
     return cell;
 }
@@ -197,16 +203,27 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"post"]) {
+        ESPostViewController *newPost = [segue destinationViewController];
+        newPost.delegate = self;
+        
+    }
 }
 
- */
+- (void)addNewPost:(ESPost *)theNewpost
+{
+    [_posts insertObject:theNewpost atIndex:0];
+    
+}
+
+
+
+
+
 
 @end
