@@ -10,8 +10,10 @@
 #import "ESPost.h"
 
 @protocol AddPost <NSObject>
+@optional
 
 - (void)addNewPost:(ESPost *)theNewpost;
+- (void)editPost:(ESPost *)post index:(NSIndexPath *)index;
 
 @end
 
@@ -22,7 +24,7 @@
 @property (nonatomic, weak) IBOutlet UITextField *myTitle;
 @property (nonatomic, weak) IBOutlet UITextField *myContent;
 
-@property (nonatomic, weak) IBOutlet UIButton *myPost;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *myPost;
 
 @property (nonatomic, weak) id delegate;
 

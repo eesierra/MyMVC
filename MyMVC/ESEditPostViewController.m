@@ -1,21 +1,19 @@
 //
-//  ESPostViewController.m
+//  ESEditPostViewController.m
 //  MyMVC
 //
-//  Created by Eduardo Sierra on 10/23/13.
+//  Created by Eduardo Sierra on 10/29/13.
 //  Copyright (c) 2013 Sierra. All rights reserved.
 //
 
-#import "ESPostViewController.h"
-#import "ESPostsTableViewController.h"
-#import "ESPost.h"
+#import "ESEditPostViewController.h"
 #import "UIColor+Custom.h"
 
-@interface ESPostViewController ()
+@interface ESEditPostViewController ()
 
 @end
 
-@implementation ESPostViewController
+@implementation ESEditPostViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,16 +27,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
     
     self.myUsername.delegate = self;
     self.myTitle.delegate = self;
     self.myContent.delegate = self;
     
+    self.myUsername.text = self.stringmyUsername;
+    self.myTitle.text = self.stringmyTitle;
+    self.myContent.text = self.stringmyContent;
     
+    
+	// Do any additional setup after loading the view.
 }
 
-- (IBAction)post:(id)sender
+- (IBAction)edit:(id)sender;
 {
     NSString *theUsername = self.myUsername.text;
     NSString *theTitle = self.myTitle.text;
@@ -51,15 +53,11 @@
     theNewpost.timeStamp = [NSDate date];
     theNewpost.color = [UIColor randomColor];
     
-    ESPostViewController *theNewpostController = [[ESPostViewController alloc] init];
-    theNewpostController.delegate = self;
-
-    [self.delegate addNewPost:theNewpost];
+    
+    [self.delegate editPost:theNewpost index:self.index];
     [[self navigationController] popViewControllerAnimated:YES];
     
-    
 }
-
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -99,6 +97,7 @@
     
     
 }
+
 
 
 - (void)didReceiveMemoryWarning

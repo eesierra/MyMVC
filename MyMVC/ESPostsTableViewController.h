@@ -13,6 +13,8 @@
 
 @property (nonatomic) NSMutableArray *posts;
 
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *editButton;
 
+- (IBAction)edit:(id)sender;
 
 @end

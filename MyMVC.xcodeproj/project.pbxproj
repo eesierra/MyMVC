@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		914091FD1820A39300DD6A66 /* ESEditPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914091FC1820A39300DD6A66 /* ESEditPostViewController.m */; };
 		916E064A181865BB002241DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916E0649181865BB002241DC /* Foundation.framework */; };
 		916E064C181865BB002241DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916E064B181865BB002241DC /* CoreGraphics.framework */; };
 		916E064E181865BB002241DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916E064D181865BB002241DC /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		914091FB1820A39300DD6A66 /* ESEditPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESEditPostViewController.h; sourceTree = "<group>"; };
+		914091FC1820A39300DD6A66 /* ESEditPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESEditPostViewController.m; sourceTree = "<group>"; };
 		916E0646181865BB002241DC /* MyMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		916E0649181865BB002241DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		916E064B181865BB002241DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +130,8 @@
 				916E0658181865BB002241DC /* ESAppDelegate.h */,
 				916E0659181865BB002241DC /* ESAppDelegate.m */,
 				916E065B181865BB002241DC /* Main.storyboard */,
+				914091FB1820A39300DD6A66 /* ESEditPostViewController.h */,
+				914091FC1820A39300DD6A66 /* ESEditPostViewController.m */,
 				916E23DC1818A6A700F8D417 /* ESPostViewController.h */,
 				916E23DD1818A6A700F8D417 /* ESPostViewController.m */,
 				916E067E18186658002241DC /* ESPost.h */,
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				914091FD1820A39300DD6A66 /* ESEditPostViewController.m in Sources */,
 				916E23DE1818A6A700F8D417 /* ESPostViewController.m in Sources */,
 				916E068618186B3F002241DC /* ESPostsTableViewController.m in Sources */,
 				916E068018186658002241DC /* ESPost.m in Sources */,
