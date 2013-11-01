@@ -174,12 +174,6 @@
 }
 
 
-- (void)tableView: (UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath *)indexPath {
-    
-    [tableView setEditing:YES animated:YES];
-    
-}
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -239,8 +233,8 @@
         editPost.stringmyUsername = [_posts[indexPath.row] userName];
         editPost.stringmyTitle = [_posts[indexPath.row] title];
         editPost.stringmyContent = [_posts[indexPath.row] content];
+        editPost.index = indexPath;
         
-        [self.editButton setTitle:@"Done!"];
         
         
     }
@@ -261,8 +255,7 @@
 
 - (void)editPost:(ESPost *)post index:(NSIndexPath *)index
 {
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    [_posts removeObject:indexPath];
+    [_posts removeObjectAtIndex: index.row];
     
     [self addNewPost:post];
     [self.tableView reloadData];
